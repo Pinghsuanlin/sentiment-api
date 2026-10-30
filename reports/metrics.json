@@ -1,0 +1,75 @@
+{
+  "dataset": "stanfordnlp/imdb",
+  "split": "test",
+  "n_test": 25000,
+  "full_test_set": true,
+  "evaluated_utc": "2026-10-29T19:33:31+00:00",
+  "models": {
+    "baseline": {
+      "artifact": "models/baseline.joblib",
+      "n": 25000,
+      "accuracy": 0.8802,
+      "precision": 0.8784,
+      "recall": 0.8826,
+      "f1": 0.8805,
+      "macro_f1": 0.8802,
+      "confusion_matrix": [
+        [
+          10973,
+          1527
+        ],
+        [
+          1467,
+          11033
+        ]
+      ],
+      "confusion_labels": [
+        "negative",
+        "positive"
+      ],
+      "roc_auc": 0.9516,
+      "accuracy_ci95": [
+        0.8764,
+        0.8845
+      ],
+      "f1_ci95": [
+        0.8765,
+        0.8849
+      ],
+      "throughput_texts_per_s": 15622.0
+    },
+    "distilbert": {
+      "artifact": "models/distilbert-imdb/final",
+      "n": 25000,
+      "accuracy": 0.8829,
+      "precision": 0.8732,
+      "recall": 0.8958,
+      "f1": 0.8844,
+      "macro_f1": 0.8829,
+      "confusion_matrix": [
+        [
+          10874,
+          1626
+        ],
+        [
+          1302,
+          11198
+        ]
+      ],
+      "confusion_labels": [
+        "negative",
+        "positive"
+      ],
+      "roc_auc": 0.9536,
+      "accuracy_ci95": [
+        0.8792,
+        0.887
+      ],
+      "f1_ci95": [
+        0.8804,
+        0.8887
+      ],
+      "throughput_texts_per_s": 116.7
+    }
+  }
+}
